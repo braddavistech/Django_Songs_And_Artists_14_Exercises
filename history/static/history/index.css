@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --background-color: black;
+  --main-text: white;
+}
+
+body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/d/d4/White-Label-Record-Marcus-Andrews.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main_title {
+  color: var(--main-text);
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  padding-top: 3vh;
+}
+
+.artist_list {
+  cursor: pointer;
+  min-height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.artist_name_list {
+  color: var(--main-text);
+  font-weight: bold;
+  font-size: 3.25vw;
+  text-decoration: none;
+}
