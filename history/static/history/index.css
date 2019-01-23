@@ -19,7 +19,7 @@
 body {
   background-image: url(https://upload.wikimedia.org/wikipedia/en/d/d4/White-Label-Record-Marcus-Andrews.JPG);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: black;
     min-height: 100vh;
 }

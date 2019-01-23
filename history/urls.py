@@ -9,5 +9,6 @@ urlpatterns = [
     path('addArtist', views.addArtist, name='addArtist'),
     path('addSong', views.addSong, name='addSong'),
     path('newArtist', views.submit_artist, name='submit_artist'),
-     path('saveArtist', views.save_artist, name='save_artist'),
+    path('saveArtist', views.save_artist, name='save_artist'),
+    path('saveSong', views.save_song, name='save_song'),
 ]

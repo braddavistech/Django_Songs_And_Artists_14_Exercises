@@ -4,7 +4,6 @@
 
   <div id="main_container">
     <h1 class="main_title">Add Artist to Database</h1>
-    <!-- <form class="add_artist" action="/your-name/" method="post"></form> -->
     <form class="add_artist" action="{% url 'history:save_artist' %}" method="POST">
         {% csrf_token %}
       <section class="input_section">
