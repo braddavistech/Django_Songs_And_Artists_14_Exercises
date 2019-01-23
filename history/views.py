@@ -16,8 +16,6 @@ def detail(request, pk):
   return render(request, "history/detail.html", context)
 
 def addArtist(request):
-  all_artists = Artist.objects.all()
-  context = {"all_artists": all_artists}
   return render(request, "history/addArtist.html")
 
 def save_artist(request):
@@ -28,8 +26,23 @@ def save_artist(request):
   response = redirect('/')
   return response
 
+def save_song(request):
+  song_artist = request.POST['song_artist']
+  song_title = request.POST['song_title']
+  song_length = request.POST['song_length']
+  song_release = request.POST['song_release']
+  song_genre = request.POST['song_genre']
+  song_art = request.POST['song_art']
+  song_video = request.POST['song_video']
+  s = Song(Title = song_title, SongLength = int(song_length), ReleaseDate = int(song_release), Genre = song_genre, ArtistId_id = int(song_artist), Art = song_art, Video = song_video)
+  s.save()
+  response = redirect('/')
+  return response
+
 def addSong(request):
-  return render(request, "history/addSong.html")
+  all_artists = Artist.objects.all()
+  context = {"all_artists": all_artists}
+  return render(request, "history/addSong.html", context)
 
 def submit_artist(request, name, date):
   context = {"name": name, "date": date}
