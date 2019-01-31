@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404, redirec
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import Artist, Song
-from .forms import ArtistForm, SongForm
 
 def index(request):
   all_artists = Artist.objects.all()
@@ -10,9 +9,8 @@ def index(request):
   return render(request, "history/artist.html", context)
 
 def detail(request, pk):
-  songs = get_list_or_404(Song, ArtistId_id = pk)
   artist = get_object_or_404(Artist, id = pk)
-  context = {"songs": songs, "artist": artist}
+  context = {"artist": artist}
   return render(request, "history/detail.html", context)
 
 def addArtist(request):

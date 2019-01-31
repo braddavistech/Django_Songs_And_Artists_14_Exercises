@@ -5,9 +5,9 @@
 
   <div id="main_container">
     <h1 class="main_title">{{artist.ArtistName}}</h1>
-    {% if songs %}
+    {% if artist.song_set.all %}
     <div id="song_list">
-        {% for item in songs %}
+        {% for item in artist.song_set.all %}
         <h1 class="song_name">{{ item.Title }}</h1>
         <section class="indiv_song">
           <section class="left">
